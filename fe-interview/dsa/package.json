@@ -1,0 +1,17 @@
+{
+    "name": "dsa",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc --project tsconfig.json",
+        "watch-ts": "tsc --watch --project tsconfig.json"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "devDependencies": {
+        "typescript": "^5.9.3"
+    }
+}
