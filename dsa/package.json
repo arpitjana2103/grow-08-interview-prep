@@ -1,17 +1,16 @@
 {
     "name": "dsa",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "build": "tsc --project tsconfig.json",
-        "watch-ts": "tsc --watch --project tsconfig.json"
-    },
-    "keywords": [],
-    "author": "",
+    "description": "practice dsa in typescript",
     "license": "ISC",
-    "type": "commonjs",
+    "author": "Arpit Jana",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {},
     "devDependencies": {
+        "@biomejs/biome": "^2.4.7",
+        "@types/node": "^25.5.0",
+        "tsx": "^4.21.0",
         "typescript": "^5.9.3"
     }
 }
