@@ -49,6 +49,7 @@
             ],
         },
         "JavaScript": {
+            "language_servers": ["vtsls", "oxlint"],
             "format_on_save": "on",
             "prettier": {
                 "allowed": false,
@@ -91,6 +92,7 @@
             ],
         },
         "TypeScript": {
+            "language_servers": ["vtsls", "oxlint"],
             "format_on_save": "on",
             "prettier": {
                 "allowed": false,
@@ -104,6 +106,7 @@
             ],
         },
         "TSX": {
+            "language_servers": ["vtsls", "oxlint"],
             "format_on_save": "on",
             "prettier": {
                 "allowed": false,
