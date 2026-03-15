@@ -1,10 +1,12 @@
 class Node<T> {
     value: T;
     next: Node<T> | null;
+    prev: Node<T> | null;
 
     constructor(value: T) {
         this.value = value;
         this.next = null;
+        this.prev = null;
     }
 }
 
@@ -67,6 +69,7 @@ class LinkedList<T> {
             return;
         }
 
+        this.head.prev = newNode;
         newNode.next = this.head;
         this.head = newNode;
     }
@@ -81,9 +84,47 @@ class LinkedList<T> {
             return;
         }
 
+        newNode.prev = this.tail;
         this.tail.next = newNode;
         this.tail = newNode;
     }
+
+    insert(value: T, index: number): void {
+        if (index < 0 || index > this._size) return;
+        if (index === 0) {
+            this.pushFront(value);
+            return;
+        }
+        if (index === this._size) {
+            this.pushBack(value);
+            return;
+        }
+        // 0 1 2 3 4
+        // index = 1 | 2 | 3 | 4
+        // let index be = 4;
+
+        let prevNode: Node<T> = this.head!;
+
+        for (let i = 0; i < index - 1; i++) {
+            prevNode = prevNode.next!;
+        }
+
+        const newNode = new Node(value);
+
+        // prevNode = 3
+        // 0 => 1 => 2 => 3(prev) => 4
+        // 0 => 1 => 2 => 3(prev) => newNode => 4
+
+        newNode.prev = prevNode;
+        newNode.next = prevNode.next;
+
+        prevNode.next!.prev = newNode;
+        prevNode.next = newNode;
+
+        this._size += 1;
+    }
+
+    // Removal Operations
 
     print(): void {
         const result: T[] = [];
@@ -103,5 +144,6 @@ list.pushBack(2);
 list.pushBack(3);
 list.pushFront(1);
 console.log(list.at(1));
+list.insert(22, 3);
 console.log("size : ", list.size);
 list.print();
