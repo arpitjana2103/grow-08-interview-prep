@@ -1,16 +1,29 @@
 {
-    "name": "dsa",
-    "version": "1.0.0",
-    "description": "practice dsa in typescript",
-    "license": "ISC",
-    "author": "Arpit Jana",
-    "type": "module",
-    "main": "index.js",
-    "scripts": {},
-    "devDependencies": {
-        "@biomejs/biome": "^2.4.7",
-        "@types/node": "^25.5.0",
-        "tsx": "^4.21.0",
-        "typescript": "^5.9.3"
-    }
+  "name": "dsa-with-typescript",
+  "version": "1.0.0",
+  "description": "learning datastructures and algorithms with typescript",
+  "homepage": "https://github.com/arpitjana2103/grow-08-interview-prep/tree/main#readme",
+  "bugs": {
+    "url": "https://github.com/arpitjana2103/grow-08-interview-prep/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arpitjana2103/grow-08-interview-prep.git#main"
+  },
+  "license": "ISC",
+  "author": "arpit jana",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "oxfmt": "^0.40.0",
+    "oxlint": "^1.55.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
 }
