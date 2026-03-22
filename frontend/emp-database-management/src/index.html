@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Employee Management System</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="app">
+            <header class="app__header">
+                <div class="logo-box">
+                    <span>
+                        <img src="./../assets/person.png" alt="logo" />
+                    </span>
+                    <h1>Employee Database Management</h1>
+                </div>
+                <button class="app__header-btn--add">Add Employee</button>
+            </header>
+            <div class="app__content">
+                <div class="employee-list">
+                    <h2>Employee List</h2>
+                    <ul class="employee-list__items">
+                        <li class="employee-list__item">
+                            <span>Tomas Leannon</span>
+                            <button>❎</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="employee-detail">
+                    <img class="employee-detail__avatar" src="" alt="Employee photo" />
+                    <h2 class="employee-detail__name">Name</h2>
+                    <p class="employee-detail__address">Address</p>
+                    <p class="employee-detail__email">Email</p>
+                    <p class="employee-detail__phone">Phone Number</p>
+                    <p class="employee-detail__dob">DOB</p>
+                </div>
+                <form class="add-employee-form" autocomplete="on" hidden>
+                    <fieldset>
+                        <legend>Personal Information</legend>
+
+                        <div class="form-group">
+                            <label for="fname">First Name</label>
+                            <input
+                                type="text"
+                                id="fname"
+                                placeholder="John"
+                                autocomplete="given-name"
+                                required
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lname">Last Name</label>
+                            <input
+                                type="text"
+                                id="lname"
+                                placeholder="Doe"
+                                autocomplete="family-name"
+                                required
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" autocomplete="bdate" />
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Contact Details</legend>
+
+                        <div class="from-group">
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="john@example.com"
+                                autocomplete="email"
+                                required
+                            />
+                        </div>
+                        <div class="from-group">
+                            <label for="contact">Phone Number</label>
+                            <input
+                                type="tel"
+                                id="contact"
+                                placeholder="+91 98765 43210"
+                                autocomplete="tel"
+                                required
+                            />
+                        </div>
+                        <div class="from-group">
+                            <label for="address">Address</label>
+                            <input
+                                type="text"
+                                id="address"
+                                placeholder="123 Main St"
+                                autocomplete="street-address"
+                                required
+                            />
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Job Information</legend>
+                        <div class="from-group">
+                            <label for="position">Positon</label>
+                            <select id="position" required>
+                                <option value="" disabled selected>Select Position</option>
+
+                                <optgroup label="Internship">
+                                    <option value="engineering-intern">Engineering Intern</option>
+                                    <option value="business-analyst-intern">
+                                        Business Analyst Intern
+                                    </option>
+                                </optgroup>
+
+                                <optgroup label="Business">
+                                    <option value="business-analyst-1">Business Analyst I</option>
+                                    <option value="business-analyst-2">Business Analyst II</option>
+                                    <option value="business-analyst-3">Business Analyst III</option>
+                                </optgroup>
+
+                                <optgroup label="Engineering">
+                                    <option value="software-engineer-1">Software Engineer I</option>
+                                    <option value="software-engineer-2">
+                                        Software Engineer II
+                                    </option>
+                                    <option value="software-engineer-3">
+                                        Software Engineer III
+                                    </option>
+                                </optgroup>
+
+                                <optgroup label="Design">
+                                    <option value="designer-1">UI/UX Designer I</option>
+                                    <option value="designer-2">UI/UX Designer II</option>
+                                </optgroup>
+
+                                <optgroup label="Leadership">
+                                    <option value="engineering-manager">Engineering Manager</option>
+                                    <option value="product-manager-1">Product Manager I</option>
+                                    <option value="product-manager-2">Product Manager II</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="from-group">
+                            <label for="salary">Salary</label>
+                            <input type="number" id="salary" min="0" step="1" placeholder="50000" />
+                        </div>
+
+                        <div class="from-group">
+                            <label for="employee-id">Employee ID</label>
+                            <input type="text" id="employee-id" />
+                        </div>
+                    </fieldset>
+
+                    <button type="submit">Add Employee</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

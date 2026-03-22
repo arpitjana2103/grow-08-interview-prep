@@ -6,7 +6,6 @@
         "typeCheck": true
     },
     "rules": {
-        "eslint/no-unused-vars": "off",
-        "typescript/explicit-function-return-type": "warn"
+        "eslint/no-unused-vars": "off"
     }
 }

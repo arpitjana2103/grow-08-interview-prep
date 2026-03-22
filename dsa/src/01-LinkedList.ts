@@ -28,6 +28,8 @@ class LinkedList<T> {
     }
 
     isEmpty(): boolean {
+        const str = "Hello World";
+        console.log(str);
         return this.head === null;
     }
 

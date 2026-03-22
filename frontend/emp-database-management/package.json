@@ -1,0 +1,19 @@
+{
+    "name": "emp-database-management",
+    "version": "1.0.0",
+    "description": "",
+    "keywords": [],
+    "license": "ISC",
+    "author": "",
+    "type": "commonjs",
+    "main": "script.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "go-live": "live-server"
+    },
+    "devDependencies": {
+        "live-server": "^1.2.0",
+        "oxfmt": "^0.41.0",
+        "oxlint": "^1.56.0"
+    }
+}

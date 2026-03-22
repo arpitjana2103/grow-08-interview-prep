@@ -1,0 +1,39 @@
+@import url("./style/reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+    --primary-color: #bf4646;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.app {
+    background-color: #e6fcf5;
+    max-width: 70rem;
+    margin: 1rem auto;
+}
+
+/*
+#BF4646
+#EDDCC6
+#FFF4EA
+#7EACB5
+*/
+
+.app__header {
+    display: flex;
+}
+
+.app__header .logo-box span {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+}
+
+.app__header .logo-box img {
+    width: 3rem;
+}

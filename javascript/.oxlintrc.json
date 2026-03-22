@@ -1,12 +1,12 @@
 {
     "$schema": "./node_modules/oxlint/configuration_schema.json",
-    "plugins": ["unicorn", "typescript", "oxc", "eslint"],
+    "plugins": ["unicorn", "typescript", "oxc"],
     "options": {
         "typeAware": true,
         "typeCheck": true
     },
     "rules": {
-        "@typescript-eslint/explicit-function-return-type": "warn",
-        "@typescript-eslint/no-unused-vars": "off"
+        "eslint/no-unused-vars": "off",
+        "typescript/explicit-function-return-type": "warn"
     }
 }
