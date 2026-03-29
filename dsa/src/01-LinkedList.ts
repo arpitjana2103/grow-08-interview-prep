@@ -1,7 +1,7 @@
-class Node<T> {
+class LNode<T> {
     value: T;
-    next: Node<T> | null;
-    prev: Node<T> | null;
+    next: LNode<T> | null;
+    prev: LNode<T> | null;
 
     constructor(value: T) {
         this.value = value;
@@ -11,8 +11,8 @@ class Node<T> {
 }
 
 class LinkedList<T> {
-    private head: Node<T> | null;
-    private tail: Node<T> | null;
+    private head: LNode<T> | null;
+    private tail: LNode<T> | null;
     private _size: number;
 
     constructor() {
@@ -49,46 +49,46 @@ class LinkedList<T> {
 
     at(index: number): T | null {
         if (index < 0) return null;
-        let currNode: Node<T> | null = this.head;
+        let currLNode: LNode<T> | null = this.head;
 
-        while (currNode !== null && index > 0) {
-            currNode = currNode.next;
+        while (currLNode !== null && index > 0) {
+            currLNode = currLNode.next;
             index--;
         }
 
-        return currNode?.value ?? null;
+        return currLNode?.value ?? null;
     }
 
     // Insertion Operations
 
     pushFront(value: T): void {
         this._size += 1;
-        const newNode: Node<T> = new Node(value);
+        const newLNode: LNode<T> = new LNode(value);
 
         if (this.head === null) {
-            this.head = newNode;
-            this.tail = newNode;
+            this.head = newLNode;
+            this.tail = newLNode;
             return;
         }
 
-        this.head.prev = newNode;
-        newNode.next = this.head;
-        this.head = newNode;
+        this.head.prev = newLNode;
+        newLNode.next = this.head;
+        this.head = newLNode;
     }
 
     pushBack(value: T): void {
         this._size += 1;
-        const newNode: Node<T> = new Node(value);
+        const newLNode: LNode<T> = new LNode(value);
 
         if (this.tail === null) {
-            this.head = newNode;
-            this.tail = newNode;
+            this.head = newLNode;
+            this.tail = newLNode;
             return;
         }
 
-        newNode.prev = this.tail;
-        this.tail.next = newNode;
-        this.tail = newNode;
+        newLNode.prev = this.tail;
+        this.tail.next = newLNode;
+        this.tail = newLNode;
     }
 
     insert(value: T, index: number): void {
@@ -105,23 +105,23 @@ class LinkedList<T> {
         // index = 1 | 2 | 3 | 4
         // let index be = 4;
 
-        let prevNode: Node<T> = this.head!;
+        let prevLNode: LNode<T> = this.head!;
 
         for (let i = 0; i < index - 1; i++) {
-            prevNode = prevNode.next!;
+            prevLNode = prevLNode.next!;
         }
 
-        const newNode = new Node(value);
+        const newLNode = new LNode(value);
 
-        // prevNode = 3
+        // prevLNode = 3
         // 0 => 1 => 2 => 3(prev) => 4
-        // 0 => 1 => 2 => 3(prev) => newNode => 4
+        // 0 => 1 => 2 => 3(prev) => newLNode => 4
 
-        newNode.prev = prevNode;
-        newNode.next = prevNode.next;
+        newLNode.prev = prevLNode;
+        newLNode.next = prevLNode.next;
 
-        prevNode.next!.prev = newNode;
-        prevNode.next = newNode;
+        prevLNode.next!.prev = newLNode;
+        prevLNode.next = newLNode;
 
         this._size += 1;
     }
@@ -130,11 +130,11 @@ class LinkedList<T> {
 
     print(): void {
         const result: T[] = [];
-        let currNode: Node<T> | null = this.head;
+        let currLNode: LNode<T> | null = this.head;
 
-        while (currNode !== null) {
-            result.push(currNode.value);
-            currNode = currNode.next;
+        while (currLNode !== null) {
+            result.push(currLNode.value);
+            currLNode = currLNode.next;
         }
 
         console.log(`${result.join(" --> ")} --> null`);
