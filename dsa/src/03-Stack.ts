@@ -25,9 +25,9 @@ class Stack<T> {
 /*
 | Operation   | Description             | Time Complexity | Notes                          |
 | ----------- | ----------------------- | --------------- | ------------------------------ |
-| **push**    | Add element to top      | O(1)*           | Amortized (resizing may occur) |
-| **pop**     | Remove top element      | O(1)            | Direct removal from end        |
-| **peek**    | Get top element         | O(1)            | Simple index access            |
-| **size**    | Get number of elements  | O(1)            | Stored internally              |
-| **isEmpty** | Check if stack is empty | O(1)            | Length comparison              |
+| push        | Add element to top      | O(1)*           | Amortized (resizing may occur) |
+| pop         | Remove top element      | O(1)            | Direct removal from end        |
+| peek        | Get top element         | O(1)            | Simple index access            |
+| size        | Get number of elements  | O(1)            | Stored internally              |
+| isEmpty     | Check if stack is empty | O(1)            | Length comparison              |
 */
